@@ -40,17 +40,17 @@ Files read:
 `test/subject_test.txt` The subject IDs in the order in which each activity was performed
 
 
-**Part 3: Combine Train & Test Data Sets. TRAIN_SET & TEST_SET**
+**Part 3: Combine Train & Test Data Sets.**
 Since they contain the same columns, we combine them by joining  the rows.
 
 1. Using dimension information, we combine the test set & the training set by binding the rows. Also the features names are assigned column names of the combined set. 
 
-2. We combine the subject IDs of each observation in both the sets.
+2. We combine the subject IDs of all observations in both the sets.
 
-3. We also combine the activity IDs of each observation in both the sets.
+3. We also combine the activity IDs of all observations in both the sets.
 
 **Part 4: Using descriptive activity to name the activities in the data set.**
-Here we use the description given by the plyr join() prserves order.
+Here we use the description given by the **plyr** `join()` preserves order.
 
 We create a column which describes the activity being performed corresponding to the activity ID. This helps as we know the activity instead of just the activity ID.
 
@@ -68,7 +68,7 @@ Since the column names of the reduced dataset is in the original form, we try to
 
 **Part 8: Melting the dataset i.e. shaping the data set so that it is sorted by subject_id & activity_label**
 
-We use `melt()` as a way to sort the data set by subject ID & activity label. This is used as we need to create the average of each variable for each activity and each subject.
+We use **reshape2** `melt()` as a way to sort the data set by subject ID & activity label. This is used as we need to create the average of each variable for each activity and each subject.
 
 Then we use `dcast()` to calculate the average of each sensor output for each subject sorted by subject ID.
 
