@@ -1,11 +1,3 @@
----
-title: Codebook
-author: fwala
-date: Saturday, February 21, 2015
-output: html_document
----
-
-
 ##Codebook.md
 
 **CodeBook is done for final reduced tidy data set.** 
