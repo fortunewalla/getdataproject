@@ -1,19 +1,15 @@
----
-title: "Untitled"
-author: "fwala"
-date: "Saturday, February 21, 2015"
-output: html_document
----
 ##Getting and cleaning data course project:
 
-**Objective:** To combine various data files from into one data set & create a reduced tidy data set. 
+**Objective:** *To combine various data files from project directory into one data set & then create a reduced tidy data set.*
 
 As per Coursera Instructions Github repository should contain:
 
-1) `README.md` - describing how the script works and the code book describing the variables.
-2) `run_analysis.R` - should generate tidydata.txt
-3) `CodeBook.md` - Describing the variables you have created.
-4) `tidydata.txt` - The final tidy set contains average values of the sensor outputs.
+1. `README.md` - describing how the script works and the code book describing the variables.
+2. `run_analysis.R` - should generate `tidydata.txt`
+3. `CodeBook.md` - Describing the variables you have created.
+4. `tidydata.txt` - The final tidy set contains average values of the sensor outputs.
+
+###Please see `CodeBook.md` for codebook information.
 
 **Part 1. Download .ZIP file & Unzip data set.**
 
@@ -62,11 +58,11 @@ We create a column which describes the activity being performed corresponding to
 
 Finally, all the information i.e. sensor output, subject IDs & activity ID & activity label is combined into a single set.
 
-**Part 6: Extracts only the measurements on the  mean and standard deviation for each measurement. **
+**Part 6: Extracts only the measurements on the  mean and standard deviation for each measurement.**
 
 We then keep information only relating to the mean & standard deviation values & discard the rest of the sensor outputs.
 
-**Part 7: Appropriately labels the data set with descriptive variable names. **
+**Part 7: Appropriately labels the data set with descriptive variable names.**
 
 Since the column names of the reduced dataset is in the original form, we try to tidy it up by using some standard notation like using underscore(_), all capitals, etc...
 
@@ -77,5 +73,4 @@ We use `melt()` as a way to sort the data set by subject ID & activity label. Th
 Then we use `dcast()` to calculate the average of each sensor output for each subject sorted by subject ID.
 
 **Part 9: Rewrite the final reduced data set into a file.**
-We use `write.table()` 
-
+We use `write.table()` to output the reduced tidy dataset to a text file.
